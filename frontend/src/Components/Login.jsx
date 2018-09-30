@@ -4,20 +4,22 @@ import { Link } from 'react-router-dom';
 class Login extends Component {
   render() {
     return (
-      <div>
-        <div>Login </div>
-        <div>
-          <form>
-            <input type='email' placeholder='email' />
-            <input type='password' placeholder='password' />
-            <input type='submit' value='Log In' />
-          </form>
-        </div>
-        <div>
-          <p>or</p>
-          <Link to={'/register'}>
-            Register
-          </Link>
+      <div className='entry-container'>
+        <div className='entry'>
+          <h1>Login</h1>
+          <div className='form'>
+            <form>
+              <div><input type='email' placeholder='email'/></div>
+              <div><input type='password' placeholder='password'/></div>
+              <div className='form-submit'><input type='submit' value='Log In'/></div>
+            </form>
+          </div>
+          <div className='center-column'>
+            <p>or</p>
+            <Link to={'/register'}>
+              Register
+            </Link>
+          </div>
         </div>
       </div>
     );
