@@ -11,24 +11,34 @@ class App extends Component {
     super();
 
     this.state = {
-      user: null
+      user: null,
+      name: '',
+      email: '',
+      password: ''
     }
+  }
+
+  onChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
   }
 
   render() {
     const { user } = this.state;
+    console.log(this.state)
     return (
       <Switch>
         <Route exact path='/' render={() => (
           !user ? (
-            <Redirect to='/Login'/>
+            <Redirect to='/Login' />
           ) : (
-            <Redirect to='/Portfolio'/>
+            <Redirect to='/Portfolio' />
           )
         )}/>
-        <Route path='/login' component={Login}/>
-        <Route path='/register' component={Register}/>
-        <Route path='/portfolio' component={Portfolio}/>
+        <Route path='/login' render={() => <Login onChange={this.onChange} />} />
+        <Route path='/register' render={() => <Register onChange={this.onChange} />} />
+        <Route path='/portfolio' component={Portfolio} />
       </Switch>
     );
   }
