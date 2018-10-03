@@ -19,3 +19,48 @@
   width: 100vw;
   height: 100vh;
 }
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 5px;
+}
+
+.header-portfolio {
+  padding-right: 10px;
+  border-right: 1px solid black;
+}
+
+.header-transactions {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.portfolio-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.portfolio-listing {
+  display: flex;
+  width: 50vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px black solid;
+}
+
+.portfolio-stock {
+  border-bottom: 1px black solid;
+  padding: 8px;
+}
+
+.portfolio-buy {
+  display: flex;
+  width: 50vw;
+  flex-direction: column;
+  /*justify-content: center;*/
+  align-items: center;
+}
+
