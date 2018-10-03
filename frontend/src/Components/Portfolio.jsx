@@ -14,24 +14,22 @@ class Portfolio extends Component {
   render() {
     return (
       <div>
-        <div className='header' >
-          <Header />
-        </div>
-        <div>
+        <Header />
+        <div className='portfolio-title'>
           <h1>Portfolio</h1>
         </div>
         <div className='portfolio-body'>
           <div className='portfolio-listing'>
             {data.map(el => (
-              <div>{el.ticker} - {el.shares} - ${el.price}</div>
+              <div className='portfolio-stock'>{el.ticker} - {el.shares} - ${el.price}</div>
             ))}
           </div>
           <div className='portfolio-buy'>
             <h1>Cash - $5000</h1>
             <form>
-              <input placeholder='ticker' name='ticker' />
-              <input placeholder='amount' name='amount'/>
-              <input type='submit' value='Buy' />
+              <div><input placeholder='ticker' name='ticker' /></div>
+              <div><input placeholder='amount' name='amount'/></div>
+              <div><input type='submit' value='Buy' /></div>
             </form>
           </div>
         </div>
